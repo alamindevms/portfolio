@@ -1,0 +1,230 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	color: rgb(56, 55, 55);
+}
+h1 {
+	font-size: 50px;
+	line-height: 70px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 80px 0 30px 0;
+}
+h2 {
+	font-size: 35px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 80px 0 25px 0;
+}
+h1 span {
+	color: #206aac;
+}
+p {
+	color: #565555;
+	line-height: 20px;
+	margin-bottom: 40px;
+}
+a {
+	text-decoration: none;
+}
+
+section {
+	height: 100vh;
+}
+.wrapper {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+}
+nav {
+	height: 90px;
+	padding: 25px 0;
+}
+nav ul {
+	float: right;
+	list-style: none;
+}
+nav ul li {
+	float: left;
+	margin: 10px 0px 10px 20px;
+}
+nav ul li a {
+	font-size: 20px;
+	font-weight: 700;
+	color: #206aac;
+	padding: 10px;
+	transition: 0.5s;
+}
+nav ul li:hover a {
+	color: #f66460;
+}
+.half-wrap {
+	width: 45%;
+	height: 100%;
+	float: left;
+	margin-right: 5%;
+	padding: 50px 0;
+}
+
+.half-wrap img {
+	width: 100%;
+}
+
+.actionBtn {
+	padding: 10px 25px;
+	color: #fff;
+	background-color: #f66460;
+	border-radius: 5px;
+	border: none;
+	transition: 0.5s;
+}
+.actionBtn:hover {
+	background-color: rgb(252, 146, 18);
+}
+.actionBtn i {
+	margin-right: 10px;
+}
+.intro {
+	background-color: #ffffff;
+}
+.about {
+	background-color: transparent;
+}
+.project {
+	background-color: #fdfdfd;
+	padding: 50px 0;
+}
+.project h1 {
+	text-align: center;
+	font-size: 40px;
+	margin: 30px 0;
+}
+.single-item {
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+}
+.single-item .card {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px #ddd;
+	padding: 20px;
+	margin-top: 20px;
+}
+.single-item .card:hover {
+	box-shadow: none;
+	transition: 0.5s;
+}
+.single-item .card img {
+	width: 100%;
+	height: 200px;
+}
+.single-item .card h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 20px 0;
+	color: rgb(26, 27, 27);
+}
+.single-item .card p {
+	margin-bottom: 10px;
+}
+.services {
+	background-image: url('../images/bg4.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 50px;
+	text-align: center;
+}
+.services .single-item {
+	background-image: url('../images/service.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	height: 400px;
+	position: relative;
+}
+.services .single-item .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+}
+.services .single-item .content i {
+	font-size: 50px;
+	color: #fff;
+	padding: 10px;
+}
+.services .single-item .content h3 {
+	font-size: 22px;
+	margin: 10px 0;
+	color: #fff;
+}
+.services .single-item .content p {
+	color: #ffffff;
+	margin-bottom: 40px;
+}
+.wrap {
+	width: 60%;
+	margin: auto;
+	padding: 100px 0;
+}
+.inquery {
+	background-image: url('../images/bg3.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 100px 50px;
+}
+.inquery h2 {
+	font-size: 30px;
+	color: #fff;
+	display: inline;
+}
+.inquery .actionBtn {
+	float: right;
+}
+
+footer {
+	background-color: #99cefc;
+	height: 300px;
+	padding: 50px 0;
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+footer h4 {
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #565555;
+}
+footer h3 {
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: #565555;
+}
+footer ul {
+	list-style: none;
+	display: inline-block;
+}
+footer ul li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 20px;
+}
+footer ul li img {
+	height: 100%;
+	width: 100%;
+}
