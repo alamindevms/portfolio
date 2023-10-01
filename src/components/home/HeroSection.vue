@@ -34,6 +34,18 @@
                 download="/files/Al-Amin-Hossain.pdf"
               />
             </div>
+
+            <ul class="flex items-center gap-2">
+              <li v-for="social in socials" :key="social.id">
+                <a
+                  :href="social.link"
+                  target="_blank"
+                  class="h-10 w-10 rounded-full bg-white shadow-sm flex items-center justify-center text-black-mute hover:bg-primary hover:text-white-soft transition-all duration-300"
+                >
+                  <component :is="social.icon" class="h-5 w-5" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -58,4 +70,28 @@
 import { ArrowLongDownIcon, ArrowDownTrayIcon } from '@heroicons/vue/24/solid'
 import PrimaryLink from '@/components/buttons/PrimaryLink.vue'
 import SecondaryLink from '@/components/buttons/SecondaryLink.vue'
+import TwitterIcon from '../icons/TwitterIcon.vue'
+import LinkedInIcon from '../icons/LinkedInIcon.vue'
+import FacebookIcon from '../icons/FacebookIcon.vue'
+
+const socials = [
+  {
+    id: 1,
+    name: 'Twitter',
+    icon: TwitterIcon,
+    link: 'https://twitter.com/alamindevms'
+  },
+  {
+    id: 2,
+    name: 'LinkedIn',
+    icon: LinkedInIcon,
+    link: 'https://www.linkedin.com/in/alaminhossainpro/'
+  },
+  {
+    id: 3,
+    name: 'Facebook',
+    icon: FacebookIcon,
+    link: 'https://www.facebook.com/alaminhossainpro/'
+  }
+]
 </script>
