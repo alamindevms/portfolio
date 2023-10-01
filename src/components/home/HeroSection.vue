@@ -29,9 +29,9 @@
               <PrimaryLink text="Contact me" link="#contact" />
               <SecondaryLink
                 text="Download CV"
-                link="/files/Al-Amin-Hossain.pdf"
+                link="/portfolio/files/Al-Amin-Hossain.pdf"
                 :icon="ArrowDownTrayIcon"
-                download="/files/Al-Amin-Hossain.pdf"
+                download="/portfolio/files/Al-Amin-Hossain.pdf"
               />
             </div>
 
@@ -55,7 +55,7 @@
             class="h-[400px] w-[345px] laptop:h-[500px] laptop:w-[418px] mx-auto rounded-t-full px-2 pt-2 border-t border-x border-gray-200"
           >
             <img
-              src="/images/profile.jpeg"
+              src="/portfolio/images/profile.jpeg"
               class="h-full w-auto max-w-full mx-auto rounded-t-full"
               alt="Al Amin Hossain"
             />

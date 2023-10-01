@@ -167,7 +167,7 @@ const testimonials = reactive([
     name: 'John Smith',
     company: 'XYZ',
     designation: 'CEO',
-    avatar: '/images/default-avatar.jpeg'
+    avatar: '/portfolio/images/default-avatar.jpeg'
   },
   {
     message:
@@ -175,7 +175,7 @@ const testimonials = reactive([
     name: 'John Smith',
     company: 'XYZ',
     designation: 'CEO',
-    avatar: '/images/default-avatar.jpeg'
+    avatar: '/portfolio/images/default-avatar.jpeg'
   },
   {
     message:
@@ -183,7 +183,7 @@ const testimonials = reactive([
     name: 'John Smith',
     company: 'XYZ',
     designation: 'CEO',
-    avatar: '/images/default-avatar.jpeg'
+    avatar: '/portfolio/images/default-avatar.jpeg'
   },
   {
     message:
@@ -191,7 +191,7 @@ const testimonials = reactive([
     name: 'John Smith',
     company: 'XYZ',
     designation: 'CEO',
-    avatar: '/images/default-avatar.jpeg'
+    avatar: '/portfolio/images/default-avatar.jpeg'
   }
 ])
 </script>

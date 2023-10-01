@@ -45,14 +45,14 @@ const projects = reactive([
     id: 1,
     site_name: 'CareGuru',
     site_link: 'https://careguru.aaraa.com.bd/',
-    thumbnail: '/images/careguru.png',
+    thumbnail: '/portfolio/images/careguru.png',
     technologies: ['Vue', 'Tailwind Css', 'Pinia']
   },
   {
     id: 2,
     site_name: 'RERP',
     site_link: 'https://laraerp.sysable.tech/',
-    thumbnail: '/images/rerp.png',
+    thumbnail: '/portfolio/images/rerp.png',
     technologies: ['Vue', 'Tailwind Css', 'Pinia']
   }
 ])

@@ -59,7 +59,7 @@
               loading="lazy"
               class="h-auto w-auto shrink-0"
               style="color: transparent"
-              :src="`/images/${stack.img}`"
+              :src="`/portfolio/images/${stack.img}`"
             />
             <!-- <p class="text-sm font-normal text-white-mute">{{ stack?.name }}</p> -->
           </div>

@@ -16,7 +16,7 @@
           <div class="col-span-1 overflow-hidden rounded-lg shadow">
             <a href="https://careguru.aaraa.com.bd/" target="_blank">
               <img
-                src="/images/careguru.png"
+                src="/portfolio/images/careguru.png"
                 class="w-full h-auto hover:scale-105 transition-all duration-300"
                 alt="CareGuru"
               />
@@ -25,7 +25,7 @@
           <div class="col-span-1 overflow-hidden rounded-lg shadow">
             <a href="https://laraerp.sysable.tech/dashboard" target="_blank">
               <img
-                src="/images/rerp.png"
+                src="/portfolio/images/rerp.png"
                 class="w-full h-auto hover:scale-105 transition-all duration-300"
                 alt="RERP"
               />
