@@ -1,0 +1,80 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --color-primary: 16 185 129;
+
+  --color-white: #ffffff;
+  --color-white-soft: 248 248 248;
+  --color-white-mute: 242 242 242;
+
+  --color-black: 24 24 24;
+  --color-black-soft: 34 34 34;
+  --color-black-mute: 40 40 40;
+
+  --color-divider-light-1: 60 60 60 0.29;
+  --color-divider-light-2: 60 60 60 0.12;
+  --color-divider-dark-1: 84 84 84 0.65;
+  --color-divider-dark-2: 84 84 84 0.48;
+
+  --color-text-light-1: var(--color-primary);
+  --color-text-light-2: 60 60 60 0.66;
+  --color-text-dark-1: var(--color-white);
+  --color-text-dark-2: 235 235 235 0.64;
+
+
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--color-white);
+  --color-background-soft: var(--color-white-soft);
+  --color-background-mute: var(--color-white-mute);
+
+  --color-border: var(--color-divider-light-2);
+  --color-border-hover: var(--color-divider-light-1);
+
+  --color-heading: var(--color-text-light-1);
+  --color-text: var(--color-text-light-1);
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-black);
+    --color-background-soft: var(--color-black-soft);
+    --color-background-mute: var(--color-black-mute);
+
+    --color-border: var(--color-divider-dark-2);
+    --color-border-hover: var(--color-divider-dark-1);
+
+    --color-heading: var(--color-text-dark-1);
+    --color-text: var(--color-text-dark-2);
+  }
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter
+    -apple-system
+    BlinkMacSystemFont
+    'Segoe UI'
+    Roboto
+    Oxygen
+    Ubuntu
+    Cantarell
+    'Fira Sans'
+    'Droid Sans'
+    'Helvetica Neue'
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
