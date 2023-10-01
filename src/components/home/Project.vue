@@ -9,9 +9,6 @@
           <div class="relative overflow-hidden rounded-lg p-4 bg-gray-100 group">
             <img
               :alt="project.site_name"
-              loading="lazy"
-              width="800"
-              height="800"
               class="h-40 xl:h-44 w-full object-cover rounded-lg group-hover:scale-105 transition-all duration-300 overflow-hidden"
               :src="project.thumbnail"
             />

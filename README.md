@@ -33,3 +33,19 @@ npm run build
 ```sh
 npm run lint
 ```
+
+Deploy to gh-pages
+
+### How To Deploy Your Vue App to GitHub Pages [ESLint](https://learnvue.co/articles/deploy-vue-to-github-pages)
+
+```sh
+git add  dist -f
+```
+
+```sh
+git commit -m "push to gh-pages"
+```
+
+```sh
+git subtree push --prefix dist origin gh-pages
+```
