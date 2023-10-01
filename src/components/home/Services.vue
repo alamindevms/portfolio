@@ -13,16 +13,9 @@
           :key="service.id"
         >
           <div
-            class="h-20 laptop:h-28 w-20 laptop:w-28 rounded-full group-hover:bg-primary bg-gray-100 border-4 border-white absolute -top-10 laptop:-top-14 left-1/2 -translate-x-1/2 flex items-center justify-center transition-all duration-300"
+            class="h-20 laptop:h-28 w-20 laptop:w-28 rounded-full group-hover:bg-primary group-hover:text-white bg-gray-100 border-4 border-white absolute -top-10 laptop:-top-14 left-1/2 -translate-x-1/2 flex items-center justify-center transition-all duration-300"
           >
-            <img
-              alt="icon"
-              loading="lazy"
-              width="100"
-              height="100"
-              class="h-7 laptop:h-10 w-7 laptop:w-10"
-              src="/_next/image?url=%2Fimages%2Fdesign.png&amp;w=256&amp;q=75"
-            />
+            <component :is="service.icon" class="h-8 w-8" />
           </div>
           <h4
             class="text-lg laptop:text-xl font-medium text-gray-800 group-hover:text-white transition-all duration-300"
@@ -41,6 +34,12 @@
 </template>
 
 <script setup>
+import {
+  AcademicCapIcon,
+  CodeBracketIcon,
+  ComputerDesktopIcon,
+  RocketLaunchIcon
+} from '@heroicons/vue/24/solid'
 import { reactive } from 'vue'
 
 const services = reactive([
@@ -48,25 +47,29 @@ const services = reactive([
     id: 1,
     title: 'Web Design',
     description:
-      'Crafting Engaging User Experiences: Designing websites that adapt seamlessly to various devices and screen sizes, ensuring your audience receives an optimal experience on desktops, tablets, and smartphones.'
+      'Crafting Engaging User Experiences: Designing websites that adapt seamlessly to various devices and screen sizes, ensuring your audience receives an optimal experience on desktops, tablets, and smartphones.',
+    icon: CodeBracketIcon
   },
   {
     id: 2,
     title: 'UI Development',
     description:
-      'Elevating Digital Aesthetics Creating visually appealing and intuitive user interfaces that captivate users, enhance brand identity, and improve overall usability.'
+      'Elevating Digital Aesthetics Creating visually appealing and intuitive user interfaces that captivate users, enhance brand identity, and improve overall usability.',
+    icon: ComputerDesktopIcon
   },
   {
     id: 3,
     title: 'Frameworks Mastery',
     description:
-      'Harnessing the Power of Modern Tools: Proficient in popular frontend frameworks such as React and Angular, enabling the development of feature-rich and dynamic web applications.'
+      'Harnessing the Power of Modern Tools: Proficient in popular frontend frameworks such as React and Angular, enabling the development of feature-rich and dynamic web applications.',
+    icon: AcademicCapIcon
   },
   {
     id: 4,
     title: 'Performance Optimization',
     description:
-      'Speeding Up Your Web Presence: Implementing optimization techniques to improve website loading times, performance, and SEO rankings, ensuring a smooth and efficient user experience.'
+      'Speeding Up Your Web Presence: Implementing optimization techniques to improve website loading times, performance, and SEO rankings, ensuring a smooth and efficient user experience.',
+    icon: RocketLaunchIcon
   }
 ])
 </script>
