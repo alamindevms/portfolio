@@ -27,7 +27,11 @@
             <a href="tel: +8801922866947">+8801922866947</a>
           </div>
         </div>
-        <div class="grid col-span-2 laptop:grid-cols-2 gap-8">
+        <form
+          ref="form"
+          @submit.prevent="sendEmail"
+          class="grid col-span-2 laptop:grid-cols-2 gap-8"
+        >
           <div class="space-y-1 col-span-1 laptop:col-span-2">
             <label for="name" class="text-sm laptop:text-base font-normal text-gray-700 block">
               Full Name
@@ -35,7 +39,8 @@
             <input
               type="text"
               id="name"
-              class="border-b border-gray-200 focus:border-none focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              name="user_name"
+              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter name"
             />
           </div>
@@ -44,9 +49,10 @@
               Email
             </label>
             <input
-              type="text"
+              type="email"
               id="email"
-              class="border-b border-gray-200 focus:border-none focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              name="user_email"
+              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter email"
             />
           </div>
@@ -55,9 +61,10 @@
               Phone
             </label>
             <input
-              type="text"
+              type="tel"
               id="phone"
-              class="border-b border-gray-200 focus:border-none focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              name="user_phone"
+              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter phone"
             />
           </div>
@@ -68,14 +75,20 @@
             </label>
             <textarea
               id="message"
-              class="border-b border-gray-200 focus:border-none focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              name="message"
+              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Write your message..."
             ></textarea>
           </div>
           <div>
-            <PrimaryLink text="Send" link="/" class="!inline-block" />
+            <button
+              type="submit"
+              class="text-sm laptop:text-base font-medium bg-primary px-4 laptop:py-2 laptop:px-6 py-3 rounded-xl text-white flex items-center gap-2"
+            >
+              Send
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </section>
@@ -83,5 +96,30 @@
 
 <script setup>
 import { MapPinIcon, EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/solid'
-import PrimaryLink from '../buttons/PrimaryLink.vue'
+import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
+import { useToast } from 'vue-toastification'
+
+const toast = useToast()
+
+const form = ref()
+
+// submit handler
+const sendEmail = () => {
+  console.log('form', form)
+  emailjs.sendForm('service_kv2h6yi', 'template_034nf9j', form.value, '4ZFF-OZSCIy26EVSQ').then(
+    (result) => {
+      console.log('SUCCESS!', result.text)
+      toast.success('Success', {
+        timeout: 2000
+      })
+    },
+    (error) => {
+      console.log('FAILED...', error.text)
+      toast.error(error.text, {
+        timeout: 2000
+      })
+    }
+  )
+}
 </script>
