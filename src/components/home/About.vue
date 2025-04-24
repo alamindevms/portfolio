@@ -72,17 +72,25 @@ import { reactive } from 'vue'
 
 const education_experiences = reactive([
   {
-    id: 1,
-    designation: 'Front-End Developer',
-    duration: '2022 - Present',
-    company: 'Sysable Technology',
+    id: 6,
+    designation: 'Front-End Engineer',
+    duration: 'Sep 2023 - Present',
+    company: 'Tyro Solutions',
     active: true,
+    align: false
+  },
+  {
+    id: 5,
+    designation: 'Front-End Developer',
+    duration: 'April 2022 - Agu 2023',
+    company: 'Sysable Technology',
+    active: false,
     align: true
   },
   {
-    id: 2,
+    id: 4,
     designation: 'Front-End Developer',
-    duration: '2021 - 2022',
+    duration: 'Feb 2021 - Mar 2022',
     company: 'Mistri Solutions',
     active: false,
     align: false
@@ -90,21 +98,21 @@ const education_experiences = reactive([
   {
     id: 3,
     designation: 'Executive Support Eng.',
-    duration: '2016 - 2021',
+    duration: 'Jul 2016 - Jan 2021',
     company: 'Stargate Communications',
     active: false,
     align: true
   },
   {
-    id: 4,
+    id: 2,
     designation: 'Bachelor Of Business Studies (BBA)',
-    duration: '2016 - Running',
+    duration: '2016 - 2019 (Drop Out)',
     company: 'Kabi Nazrul Govt. College',
     active: false,
     align: false
   },
   {
-    id: 5,
+    id: 1,
     designation: 'Higher Secondary Certificate (HSC)',
     duration: '2014 - 2016',
     company: 'Dania University College',
@@ -137,16 +145,16 @@ const stacks = reactive([
   },
   {
     id: 4,
-    name: 'Vue JS',
-    img: 'vue.png',
-    bg_color: 'bg-[#41b883]',
+    name: 'React JS',
+    img: 'react.png',
+    bg_color: 'bg-[#61dafb]',
     scale: 1.5
   },
   {
     id: 5,
-    name: 'React JS',
-    img: 'react.png',
-    bg_color: 'bg-[#61dafb]',
+    name: 'Vue JS',
+    img: 'vue.png',
+    bg_color: 'bg-[#41b883]',
     scale: 1.2
   },
   {

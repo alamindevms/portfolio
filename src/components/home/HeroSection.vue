@@ -29,9 +29,9 @@
               <PrimaryLink text="Contact me" link="#contact" />
               <SecondaryLink
                 text="Download CV"
-                link="/files/Al-Amin-Hossain.pdf"
+                :link="CVFile"
                 :icon="ArrowDownTrayIcon"
-                download="/files/Al-Amin-Hossain.pdf"
+                :download="CVFile"
               />
             </div>
 
@@ -55,8 +55,8 @@
             class="h-[400px] w-[345px] laptop:h-[500px] laptop:w-[418px] mx-auto rounded-t-full px-2 pt-2 border-t border-x border-gray-200"
           >
             <img
-              src="/images/profile.jpeg"
-              class="h-full w-auto max-w-full mx-auto rounded-t-full"
+              src="/images/profile-1.jpeg"
+              class="h-full w-full max-w-full mx-auto rounded-t-full"
               alt="Al Amin Hossain"
             />
           </div>
@@ -73,6 +73,8 @@ import SecondaryLink from '@/components/buttons/SecondaryLink.vue'
 import TwitterIcon from '../icons/TwitterIcon.vue'
 import LinkedInIcon from '../icons/LinkedInIcon.vue'
 import FacebookIcon from '../icons/FacebookIcon.vue'
+import GithubIcon from '../icons/GithubIcon.vue'
+import CVFile from '../../assets/files/AlAminHossain.pdf'
 
 const socials = [
   {
@@ -89,6 +91,12 @@ const socials = [
   },
   {
     id: 3,
+    name: 'GitHub',
+    icon: GithubIcon,
+    link: 'https://www.github.com/alamindevms/'
+  },
+  {
+    id: 4,
     name: 'Facebook',
     icon: FacebookIcon,
     link: 'https://www.facebook.com/alaminhossainpro/'

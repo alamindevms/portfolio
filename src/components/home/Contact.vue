@@ -1,6 +1,6 @@
 <template>
-  <section id="contact" class="mt-20">
-    <div class="container pb-10">
+  <section id="contact" class="mt-20 py-10 bg-gray-100">
+    <div class="container">
       <h2 class="text-3xl font-bold text-black-soft text-center laptop:text-left">
         Let's Work <span class="text-primary">Together</span>
       </h2>
@@ -30,7 +30,7 @@
         <form
           ref="form"
           @submit.prevent="sendEmail"
-          class="grid col-span-2 laptop:grid-cols-2 gap-8"
+          class="grid col-span-2 laptop:grid-cols-2 gap-5"
         >
           <div class="space-y-1 col-span-1 laptop:col-span-2">
             <label for="name" class="text-sm laptop:text-base font-normal text-gray-700 block">
@@ -40,7 +40,7 @@
               type="text"
               id="name"
               name="user_name"
-              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              class="border-b border-gray-200 outline-none border border-transparent focus:border-primary focus:outline-none focus:bg-light-gray px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter name"
             />
           </div>
@@ -52,7 +52,7 @@
               type="email"
               id="email"
               name="user_email"
-              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              class="border-b border-gray-200 outline-none border border-transparent focus:border-primary focus:outline-none focus:bg-light-gray px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter email"
             />
           </div>
@@ -64,7 +64,7 @@
               type="tel"
               id="phone"
               name="user_phone"
-              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              class="border-b border-gray-200 outline-none border border-transparent focus:border-primary focus:outline-none focus:bg-light-gray px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Enter phone"
             />
           </div>
@@ -76,7 +76,7 @@
             <textarea
               id="message"
               name="message"
-              class="border-b border-gray-200 outline-none focus:border focus:outline-none focus:bg-light-gray focus:px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
+              class="border-b border-gray-200 outline-none border border-transparent focus:border-primary focus:outline-none focus:bg-light-gray px-2 focus:rounded-md py-2 translate-all duration-300 text-sm font-light text-gray-800 placeholder:text-gray-400 w-full"
               placeholder="Write your message..."
             ></textarea>
           </div>

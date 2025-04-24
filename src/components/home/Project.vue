@@ -40,13 +40,34 @@ import { reactive } from 'vue'
 const projects = reactive([
   {
     id: 1,
+    site_name: 'Jamana BD',
+    site_link: 'https://jamanabd.com/',
+    thumbnail: '/portfolio/images/jamanabd.png',
+    technologies: ['React', 'Next.js', 'Tailwind', 'Redux']
+  },
+  {
+    id: 2,
+    site_name: 'Islamic Foundation BD',
+    site_link: 'https://islamicfoundationbd.com/',
+    thumbnail: '/portfolio/images/islamic-foundation.png',
+    technologies: ['Laravel Blade', 'Bootstrap']
+  },
+  {
+    id: 3,
+    site_name: 'Firewood LPG',
+    site_link: 'https://firewoodlpg.com/',
+    thumbnail: '/portfolio/images/firewoodlpg.png',
+    technologies: ['Nuxt.js', 'Pinia']
+  },
+  {
+    id: 4,
     site_name: 'CareGuru',
     site_link: 'https://careguru.aaraa.com.bd/',
     thumbnail: '/portfolio/images/careguru.png',
     technologies: ['Vue', 'Tailwind Css', 'Pinia']
   },
   {
-    id: 2,
+    id: 5,
     site_name: 'RERP',
     site_link: 'https://laraerp.sysable.tech/',
     thumbnail: '/portfolio/images/rerp.png',

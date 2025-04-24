@@ -13,21 +13,16 @@
           <PrimaryLink text="All Projects" link="#projects" class="!inline-block" />
         </div>
         <div class="flex-1 grid grid-cols-2 gap-6">
-          <div class="col-span-1 overflow-hidden rounded-lg shadow">
-            <a href="https://careguru.aaraa.com.bd/" target="_blank">
+          <div
+            class="col-span-1 overflow-hidden rounded-lg shadow"
+            v-for="project in featuredProjects"
+            :key="project.id"
+          >
+            <a :href="project.site_link" target="_blank">
               <img
-                src="/images/careguru.png"
-                class="w-full h-auto hover:scale-105 transition-all duration-300"
-                alt="CareGuru"
-              />
-            </a>
-          </div>
-          <div class="col-span-1 overflow-hidden rounded-lg shadow">
-            <a href="https://laraerp.sysable.tech/dashboard" target="_blank">
-              <img
-                src="/images/rerp.png"
-                class="w-full h-auto hover:scale-105 transition-all duration-300"
-                alt="RERP"
+                :src="project.thumbnail"
+                class="w-full h-full object-cover hover:scale-105 transition-all duration-300"
+                :alt="project.site_name"
               />
             </a>
           </div>
@@ -37,8 +32,24 @@
   </section>
 </template>
 
-<script>
+<script setup>
+import { reactive } from 'vue'
 import PrimaryLink from '../buttons/PrimaryLink.vue'
 
-export default { components: { PrimaryLink } }
+const featuredProjects = reactive([
+  {
+    id: 1,
+    site_name: 'Jamana BD',
+    site_link: 'https://jamanabd.com/',
+    thumbnail: '/portfolio/images/jamanabd.png',
+    technologies: ['React', 'Next.js', 'Tailwind', 'Redux']
+  },
+  {
+    id: 2,
+    site_name: 'Firewood LPG',
+    site_link: 'https://firewoodlpg.com/',
+    thumbnail: '/portfolio/images/firewoodlpg.png',
+    technologies: ['Nuxt.js', 'Pinia']
+  }
+])
 </script>

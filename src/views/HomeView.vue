@@ -5,7 +5,6 @@ import FeaturedProjects from '@/components/home/FeaturedProjects.vue'
 import Contact from '@/components/home/Contact.vue'
 import About from '@/components/home/About.vue'
 import Project from '@/components/home/Project.vue'
-import Testimonial from '../components/home/Testimonial.vue'
 </script>
 
 <template>
@@ -25,7 +24,7 @@ import Testimonial from '../components/home/Testimonial.vue'
   <Project />
 
   <!-- testimonial -->
-  <Testimonial />
+  <!-- <Testimonial /> -->
 
   <!-- contact -->
   <Contact />
