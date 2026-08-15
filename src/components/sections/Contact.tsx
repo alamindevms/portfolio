@@ -1,7 +1,7 @@
 import { profile } from "../../data/profile";
 import { ButtonLink } from "../ui/ButtonLink";
 import { Reveal } from "../ui/Reveal";
-import { ArrowUpRightIcon, DownloadIcon, MailIcon } from "../ui/Icons";
+import { ArrowUpRightIcon, DownloadIcon, GithubIcon, MailIcon } from "../ui/Icons";
 
 type ContactCell = {
   label: string;
@@ -12,6 +12,12 @@ type ContactCell = {
 };
 
 const cells: ContactCell[] = [
+  {
+    label: "GitHub",
+    value: "@alamindevms",
+    href: profile.github,
+    external: true,
+  },
   { label: "Email", value: profile.email, href: `mailto:${profile.email}` },
   { label: "Phone", value: profile.phone, href: profile.phoneHref },
   { label: "Location", value: profile.location },
@@ -19,12 +25,6 @@ const cells: ContactCell[] = [
     label: "LinkedIn",
     value: "in/alaminhossainpro",
     href: profile.linkedin,
-    external: true,
-  },
-  {
-    label: "GitHub",
-    value: "@alamindevms",
-    href: profile.github,
     external: true,
   },
   { label: "Website", value: "alamindev.io", href: profile.website, external: true },
@@ -56,6 +56,11 @@ export default function Contact() {
           <ButtonLink href={`mailto:${profile.email}`}>
             <MailIcon className="size-4" />
             Email me
+          </ButtonLink>
+          <ButtonLink href={profile.github} variant="outline" external>
+            <GithubIcon className="size-4" />
+            GitHub
+            <ArrowUpRightIcon className="size-4" />
           </ButtonLink>
           <ButtonLink href={profile.linkedin} variant="outline" external>
             Connect on LinkedIn

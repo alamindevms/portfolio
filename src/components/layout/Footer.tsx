@@ -32,11 +32,13 @@ export default function Footer() {
 
         <div className="flex items-center gap-3">
           <a
-            href={`mailto:${profile.email}`}
-            aria-label="Email"
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="GitHub"
             className="grid size-10 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent/50 hover:text-accent"
           >
-            <MailIcon className="size-4" />
+            <GithubIcon className="size-4" />
           </a>
           <a
             href={profile.linkedin}
@@ -48,13 +50,11 @@ export default function Footer() {
             <LinkedinIcon className="size-4" />
           </a>
           <a
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="GitHub"
+            href={`mailto:${profile.email}`}
+            aria-label="Email"
             className="grid size-10 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent/50 hover:text-accent"
           >
-            <GithubIcon className="size-4" />
+            <MailIcon className="size-4" />
           </a>
           <a
             href={profile.website}
