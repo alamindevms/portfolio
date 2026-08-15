@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "og:image": "node scripts/generate-og-image.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -26,6 +27,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.0",
