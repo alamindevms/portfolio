@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { profile } from "../../data/profile";
 import { useActiveSection } from "../../hooks/useActiveSection";
 import { useScrolled } from "../../hooks/useScrolled";
-import { CloseIcon, DownloadIcon, MenuIcon } from "../ui/Icons";
+import { CloseIcon, DownloadIcon, GithubIcon, MenuIcon } from "../ui/Icons";
 import { ThemeToggle } from "../ui/ThemeToggle";
 
 const NAV_LINKS = [
@@ -85,6 +85,16 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="GitHub profile"
+              title="GitHub profile"
+              className="grid size-10 place-items-center rounded-full border border-line text-muted transition-colors duration-200 hover:border-accent/50 hover:text-accent"
+            >
+              <GithubIcon className="size-[18px]" />
+            </a>
             <ThemeToggle />
             <button
               type="button"
