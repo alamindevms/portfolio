@@ -21,6 +21,12 @@ const cells: ContactCell[] = [
     href: profile.linkedin,
     external: true,
   },
+  {
+    label: "GitHub",
+    value: "@alamindevms",
+    href: profile.github,
+    external: true,
+  },
   { label: "Website", value: "alamindev.io", href: profile.website, external: true },
   { label: "CV", value: "Download PDF", href: profile.cvUrl, download: true },
 ];

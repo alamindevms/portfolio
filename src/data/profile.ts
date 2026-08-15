@@ -8,6 +8,7 @@ export const profile = {
   phone: "01922866947",
   phoneHref: "tel:+8801922866947",
   linkedin: "https://www.linkedin.com/in/alaminhossainpro",
+  github: "https://github.com/alamindevms",
   website: "https://alamindev.io",
   /** Single source of truth for every "Download CV" CTA on the site. Relative so it works from any deployment path. */
   cvUrl: "al-amin-hossain-cv.pdf",

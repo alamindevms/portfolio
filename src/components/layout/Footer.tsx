@@ -1,5 +1,5 @@
 import { profile } from "../../data/profile";
-import { ArrowUpIcon, GlobeIcon, LinkedinIcon, MailIcon } from "../ui/Icons";
+import { ArrowUpIcon, GithubIcon, GlobeIcon, LinkedinIcon, MailIcon } from "../ui/Icons";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -46,6 +46,15 @@ export default function Footer() {
             className="grid size-10 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent/50 hover:text-accent"
           >
             <LinkedinIcon className="size-4" />
+          </a>
+          <a
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="GitHub"
+            className="grid size-10 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent/50 hover:text-accent"
+          >
+            <GithubIcon className="size-4" />
           </a>
           <a
             href={profile.website}
