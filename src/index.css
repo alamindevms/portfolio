@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base: #09090c;
+  --color-surface: #0f0f14;
+  --color-raised: #16161d;
+  --color-ink: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-faint: #7d7d89;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-accent: #c9f556;
+  --color-accent-strong: #d9ff70;
+  --color-accent-soft: rgb(201 245 86 / 0.1);
+  --color-on-accent: #0b0b0e;
+  --color-fill-1: rgb(255 255 255 / 0.05);
+  --color-fill-2: rgb(255 255 255 / 0.13);
+  --color-fill-3: rgb(255 255 255 / 0.28);
+  --color-glow: rgb(201 245 86 / 0.07);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+:root {
+  color-scheme: dark;
+  --grid-line: rgb(255 255 255 / 0.035);
+  --stroke-ink: rgb(250 250 250 / 0.55);
+}
+
+:root.light {
+  color-scheme: light;
+  --color-base: #f7f7f4;
+  --color-surface: #eeeee9;
+  --color-raised: #ffffff;
+  --color-ink: #17171a;
+  --color-muted: #52525b;
+  --color-faint: #6b6b74;
+  --color-line: rgb(23 23 26 / 0.12);
+  --color-accent: #486b0a;
+  --color-accent-strong: #3a5706;
+  --color-accent-soft: rgb(72 107 10 / 0.08);
+  --color-on-accent: #ffffff;
+  --color-fill-1: rgb(23 23 26 / 0.045);
+  --color-fill-2: rgb(23 23 26 / 0.1);
+  --color-fill-3: rgb(23 23 26 / 0.18);
+  --color-glow: rgb(72 107 10 / 0.06);
+  --grid-line: rgb(23 23 26 / 0.055);
+  --stroke-ink: rgb(23 23 26 / 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-base);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@utility wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--stroke-ink);
+}
+
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 76px 76px;
+}

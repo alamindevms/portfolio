@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          if (
+            stored === "light" ||
+            (stored !== "dark" && matchMedia("(prefers-color-scheme: light)").matches)
+          ) {
+            document.documentElement.classList.add("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <title>Al Amin Hossain — Frontend Developer | React | Next.js | TypeScript</title>
+    <meta
+      name="description"
+      content="Al Amin Hossain is a frontend developer with 4+ years of experience building enterprise ERP, e-commerce, and LMS applications with React, Next.js, and TypeScript."
+    />
+    <meta name="theme-color" content="#09090c" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://alamindev.io/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alamindev.io/" />
+    <meta property="og:site_name" content="Al Amin Hossain" />
+    <meta property="og:title" content="Al Amin Hossain — Frontend Developer | React | Next.js | TypeScript" />
+    <meta
+      property="og:description"
+      content="Frontend developer with 4+ years of experience building enterprise ERP, e-commerce, and LMS applications with React, Next.js, and TypeScript."
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Al Amin Hossain — Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Frontend developer with 4+ years of experience building enterprise ERP, e-commerce, and LMS applications with React, Next.js, and TypeScript."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Al Amin Hossain",
+        "jobTitle": "Frontend Developer",
+        "url": "https://alamindev.io",
+        "email": "mailto:alamindev.io@gmail.com",
+        "telephone": "+8801922866947",
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "sameAs": ["https://www.linkedin.com/in/alaminhossainpro"],
+        "knowsAbout": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue.js",
+          "Nuxt.js",
+          "Tailwind CSS",
+          "Redux Toolkit",
+          "Frontend Development"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>
